@@ -21,6 +21,17 @@ export class GithubComponent implements OnInit {
     
   }
 
+  search(){
+      this._githubService.newUsername(this.username);
+
+      this._githubService.getUser().subscribe(user => {
+        this.user = user;
+      });
+      this._githubService.getRepo().subscribe(repos => {
+        this.repos = repos;
+      });
+  }
+
   ngOnInit() {
   }
 
