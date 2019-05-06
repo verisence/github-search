@@ -15,6 +15,9 @@ export class GithubComponent implements OnInit {
       this.user = user;
     });
 
+    this._githubService.getRepo().subscribe(repos =>{
+      this.repos = repos;
+    });
     
   }
 
