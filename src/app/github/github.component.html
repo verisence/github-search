@@ -1,3 +1,4 @@
+
 <br>
 <div class="row">
   <div class="col-md-12">
@@ -12,7 +13,7 @@
 <div *ngIf="user">
   <div class="card">
       <div class="card-header">
-          <h1>{{user.name}}</h1>
+          <h1><i class="fab fa-github"></i>  {{user.name}}</h1>
       </div>
       <div class="card-body">
         <div class="row">
@@ -22,15 +23,15 @@
           <div class="col-md-8">
             <div class="row">
                 <span class="badge badge-primary">{{user.public_repos}} Public Repos  </span>
-                <span class="badge badge-success">{{user.followers}} Folowers  </span>
-                <span class="badge badge-info">{{user.following}} Following  </span>
+                <span class="badge badge-success"><i class="fas fa-users"></i> {{user.followers}} Folowers  </span>
+                <span class="badge badge-info"><i class="fas fa-user-friends"></i> {{user.following}} Following  </span>
             </div>
             <div class="row">
               <ul class="list-group">
-                  <li class="list-group-item">Username: {{user.login}}</li>
-                  <li class="list-group-item">Location: {{user.location}}</li>
-                  <li class="list-group-item">Email: {{user.email}}</li>
-                  <li class="list-group-item">Member Since: {{user.created_at|daysPassed}}</li>
+                  <li class="list-group-item"><i class="fas fa-user"></i> Username: {{user.login}}</li>
+                  <li class="list-group-item"><i class="fas fa-map-marked-alt"></i> Location: {{user.location}}</li>
+                  <li class="list-group-item"><i class="fas fa-envelope-square"></i> Email: {{user.email}}</li>
+                  <li class="list-group-item"><i class="fas fa-calendar-day"></i> Member Since: {{user.created_at|daysPassed}}</li>
               </ul>
             </div>            
           </div>
