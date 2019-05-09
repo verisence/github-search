@@ -11,7 +11,6 @@ import { environment } from "../environments/environment";
 export class GithubApiService {
   private username = "verisence";
   constructor(private http: HttpClient) { 
-    console.log("github service started...");
   }
 
   newUsername(username:string){
